@@ -1,1 +1,1 @@
-A set of utilies that I use for my projects.
+A set of utilities that I use for my projects.

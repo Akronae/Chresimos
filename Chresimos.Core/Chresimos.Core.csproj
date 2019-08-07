@@ -7,8 +7,8 @@
         <ProjectGuid>{098B0CE8-3332-413D-A43E-64FBB9AC6BB0}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Core</RootNamespace>
-        <AssemblyName>Core</AssemblyName>
+        <RootNamespace>Chresimos.Core</RootNamespace>
+        <AssemblyName>Chresimos.Core</AssemblyName>
         <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>

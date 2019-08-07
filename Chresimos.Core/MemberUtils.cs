@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Core
+namespace Chresimos.Core
 {
     public static class MemberUtils
     {

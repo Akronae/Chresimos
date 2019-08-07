@@ -1,4 +1,4 @@
-﻿namespace Core
+﻿namespace Chresimos.Core
 {
     public class PerlinNoise
     {

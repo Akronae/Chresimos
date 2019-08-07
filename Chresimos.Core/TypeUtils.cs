@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Core
+namespace Chresimos.Core
 {
     public static class TypeUtils
     {

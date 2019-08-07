@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Core
+namespace Chresimos.Core
 {
     public static class StringUtils
     {

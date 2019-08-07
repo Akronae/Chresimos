@@ -1,2 +1,2 @@
-# Chresimos
-Utilities &amp; extensions for .NET.
+# Download on Nuget
+https://www.nuget.org/packages/Chresimos/

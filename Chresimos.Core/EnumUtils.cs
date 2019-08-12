@@ -9,6 +9,8 @@ namespace Chresimos.Core
     {
         private static void CheckIsEnum <T> (bool withFlags)
         {
+            if (typeof(T) == typeof(byte) || typeof(T) == typeof(int)) return;
+            
             if (!typeof(T).IsEnum)
             {
                 throw new ArgumentException($"Type '{typeof(T).FullName}' is not an enum");

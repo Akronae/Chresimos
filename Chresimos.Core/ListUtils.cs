@@ -17,6 +17,11 @@ namespace Chresimos.Core
             return (IList) Activator.CreateInstance(genericListType);
         }
 
+        public static Type GetListElementTypeOrDefault (this IList list)
+        {
+            return list.GetType().GetGenericArguments().SingleOrDefault();
+        }
+
         public static string FormattedString <T> (this IEnumerable<T> list, Func<T, string> predicate,
             string separator = ", ")
         {

@@ -26,6 +26,11 @@ namespace Chresimos.Core
 
             return timer;
         }
+        
+        public static Timer SetTimeout <T> (Func<T> function, int delay)
+        {
+            return SetTimeout((Action) (() => function()), delay);
+        }
 
         /// <param name="interval"></param>
         /// <param name="delay"></param>
@@ -38,6 +43,11 @@ namespace Chresimos.Core
 
             SetTimeout(timer.Start, delay);
             return timer;
+        }
+
+        public static Timer SetInterval <T> (Func<T> function, int interval, int delay = 0)
+        {
+            return SetInterval((Action) (() => function()), interval, delay);
         }
     }
 }

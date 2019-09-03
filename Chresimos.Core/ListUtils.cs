@@ -72,5 +72,13 @@ namespace Chresimos.Core
 
             return shuffled;
         }
+
+        public static void CopyToList (this ICollection collection, IList list)
+        {
+            foreach (var element in collection)
+            {
+                list.Add(element);
+            }
+        }
     }
 }

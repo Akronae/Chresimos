@@ -6,6 +6,11 @@ namespace Chresimos.Core
 {
     public static class DictionaryUtils
     {
+        public static bool IsIDictionaryType (this Type type)
+        {
+            return ((IList) type.GetInterfaces()).Contains(typeof(IDictionary));
+        }
+
         public static IDictionary CreateDictionaryOfTypes (Type keyType, Type valueType)
         {
             var genericDictionaryType = typeof(Dictionary<,>).MakeGenericType(keyType, valueType);

@@ -19,6 +19,26 @@ namespace Chresimos.Core
             return random.Next(minimum, maximum + 1);
         }
 
+        public static int NextInt ()
+        {
+            return Rand.Next();
+        }
+
+        public static float NextFloat ()
+        {
+            return Range(float.MinValue, float.MaxValue);
+        }
+
+        public static bool Prob (float greaterThan)
+        {
+            return Rand.NextDouble() > greaterThan;
+        }
+
+        public static bool EquiProb ()
+        {
+            return Prob(0.5f);
+        }
+
         public static float Range (float minimum, float maximum)
         {
             return Rand.Range(minimum, maximum);
@@ -42,7 +62,7 @@ namespace Chresimos.Core
 
         public static T GetRandFromList <T> (this Random random, params T[] objs)
         {
-            if (objs.Length == 0) return default(T);
+            if (objs.Length == 0) return default;
             var rand = random.Range(0, objs.Length - 1);
             return objs[rand];
         }

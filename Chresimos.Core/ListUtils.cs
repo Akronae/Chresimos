@@ -10,6 +10,11 @@ namespace Chresimos.Core
     {
         public static readonly byte[] EmptyByteArray = new byte[0];
 
+        public static bool IsIListType (this Type type)
+        {
+            return type.GetInterfaces().Contains(typeof(IList));
+        }
+
         public static IList CreateListOfType (Type type)
         {
             var genericListType = typeof(List<>).MakeGenericType(type);
@@ -40,7 +45,12 @@ namespace Chresimos.Core
 
         public static string FormattedString <T> (this IEnumerable<T> list)
         {
-            return FormattedString(list, arg => arg.ToString());
+            string predicate (T input)
+            {
+                return ReferenceEquals(input, null) ? "<null>" : input.ToString();
+            }
+
+            return FormattedString(list, predicate);
         }
 
         public static void AddRangeUnsafe (this IList iList, IEnumerable toAdd)

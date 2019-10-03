@@ -13,7 +13,7 @@ namespace Chresimos.Core
                 function();
                 return null;
             }
-            
+
             var timer = new Timer();
             timer.Interval = delay;
             timer.Elapsed += (sender, args) =>
@@ -21,12 +21,12 @@ namespace Chresimos.Core
                 function();
                 timer.Dispose();
             };
-            
+
             timer.Start();
 
             return timer;
         }
-        
+
         public static Timer SetTimeout <T> (Func<T> function, int delay)
         {
             return SetTimeout((Action) (() => function()), delay);

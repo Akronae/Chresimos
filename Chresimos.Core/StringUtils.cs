@@ -7,7 +7,7 @@ namespace Chresimos.Core
     {
         public static string ToUnderscoreCase (this string str)
         {
-            var strs = str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString());
+            var strs = str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x : x.ToString());
             var result = strs.Aggregate(string.Empty, (current, piece) => current + piece);
 
             return result.ToLower();

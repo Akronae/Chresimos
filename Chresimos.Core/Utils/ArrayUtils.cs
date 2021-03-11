@@ -1,6 +1,6 @@
 using System;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class ArrayUtils
     {
@@ -8,9 +8,8 @@ namespace Chresimos.Core
         {
             var result = new T[length];
             Array.Copy(data, index, result, 0, length);
-            
+
             return result;
         }
-        
     }
 }

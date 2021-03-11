@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class LogUtils
     {

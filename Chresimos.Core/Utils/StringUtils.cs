@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class StringUtils
     {
@@ -11,6 +11,32 @@ namespace Chresimos.Core
             var result = strs.Aggregate(string.Empty, (current, piece) => current + piece);
 
             return result.ToLower();
+        }
+
+        public static string FirstCharToUpper (this string input)
+        {
+            switch (input)
+            {
+                case null:
+                    throw new ArgumentNullException(nameof(input));
+                case "":
+                    throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input));
+                default:
+                    return input.First().ToString().ToUpper() + input.Substring(1);
+            }
+        }
+
+        public static string FirstCharToLower (this string input)
+        {
+            switch (input)
+            {
+                case null:
+                    throw new ArgumentNullException(nameof(input));
+                case "":
+                    throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input));
+                default:
+                    return input.First().ToString().ToLower() + input.Substring(1);
+            }
         }
 
         public static string ReplaceLast (this string source, string find, string replace)

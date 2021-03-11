@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class EnumUtils
     {

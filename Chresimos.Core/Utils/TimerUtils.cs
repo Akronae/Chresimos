@@ -1,7 +1,7 @@
 using System;
 using System.Timers;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class TimerUtils
     {

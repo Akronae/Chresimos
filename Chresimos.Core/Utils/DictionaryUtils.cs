@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Chresimos.Core
+namespace Chresimos.Core.Utils
 {
     public static class DictionaryUtils
     {

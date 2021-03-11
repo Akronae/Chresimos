@@ -1,4 +1,6 @@
-﻿namespace Chresimos.Core
+﻿using Chresimos.Core.Utils;
+
+namespace Chresimos.Core
 {
     public class PerlinNoise
     {
@@ -46,7 +48,8 @@
             var b = p[xi + 1] + yi; // Then, we get another random value by adding 1 to that and putting it into p[]
             var ba = p[b] + zi; // and add z to it.  We do the whole thing over again starting with x+1.  Later
             var
-                bb = p[b + 1] + zi; // we plug aa, ab, ba, and bb back into p[] along with their +1's to get another set.
+                bb = p[b + 1] +
+                     zi; // we plug aa, ab, ba, and bb back into p[] along with their +1's to get another set.
             // in the end we have 8 values between 0 and 255 - one for each vertex on the unit cube.
             // These are all interpolated together using u, v, and w below.
 

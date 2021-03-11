@@ -11,6 +11,7 @@
         <PackageLicenseUrl>https://github.com/Akronae/Chresimos/blob/master/LICENSE</PackageLicenseUrl>
         <PackageIconUrl>https://image.flaticon.com/icons/svg/126/126428.svg</PackageIconUrl>
         <RepositoryUrl>https://github.com/Akronae/Chresimos</RepositoryUrl>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <!-- Automatic date versioned packaging -->
